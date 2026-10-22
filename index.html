@@ -374,7 +374,7 @@ const t=k=>{const v=T[P.lang][k];return v!==undefined?v:T.es[k]};
 const loc=()=>P.lang==="es"?"es-US":"en-US";
 const D=()=>P.data[U.biz];
 const B=()=>BIZ[U.biz];
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&","<":"<",">":">",'"':""","'":"'"}[c]));
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));;
 const svcOf=id=>B().svcs.find(s=>s.id===id);
 const proOf=id=>B().pros.find(p=>p.id===id);
 const sName=s=>s[P.lang];
